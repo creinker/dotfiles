@@ -1,0 +1,22 @@
+alias j jobs
+alias jv jobs -v
+alias q queue
+alias qs queue stop
+alias qd queue -d
+alias qm queue -m
+alias k kill
+alias ka kill all
+alias p put
+alias g get
+alias pg pget -n 5
+alias m mirror
+alias mpg mirror --use-pget-n=5
+alias mpl mirror --parallel=5
+alias mpgl mirror --use-pget-n=2 --parallel=5
+alias mr mirror -r
+alias mp mirror -R
+alias mpgr "mirror --use-pget-n=5 --exclude \"\.[rst](a|[0-9])(r|[0-9])$\" --exclude-glob *.sfv"
+alias mplr "mirror --parallel=5 --exclude \"\.[rst](a|[0-9])(r|[0-9])$\" --exclude-glob *.sfv"
+alias mpglr "mirror --use-pget-n=2 --parallel=5 --exclude \"\.[rst](a|[0-9])(r|[0-9])$\" --exclude-glob *.sfv"
+
+set ssl:verify-certificate no

@@ -1,0 +1,10 @@
+[user]
+	name = Chris Reinker
+	email = creinker@gmail.com
+[core]
+{{- if eq .chezmoi.os "windows" }}
+	autocrlf = true
+	filemode = false
+{{ else }}
+    autocrlf = input
+{{ end }}

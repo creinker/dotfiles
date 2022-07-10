@@ -1,0 +1,6 @@
+source ~/.vimrc
+
+# IdeaVim includes vim-surround, so enable it here
+set surround
+
+nmap <C-P> :action GotoFile<CR>
