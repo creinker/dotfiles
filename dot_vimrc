@@ -78,6 +78,10 @@ nnoremap <Down>  :echoe "Use j"<CR>
 
 " END section from Missing Semester
 
+" Allow pressing J and K at the same time to exit insert mode
+inoremap jk <esc>
+inoremap kj <esc>
+
 " Use spaces instead of TAB
 set autoindent
 set expandtab
