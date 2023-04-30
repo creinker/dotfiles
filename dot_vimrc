@@ -78,10 +78,6 @@ nnoremap <Down>  :echoe "Use j"<CR>
 
 " END section from Missing Semester
 
-" Allow pressing J and K at the same time to exit insert mode
-inoremap jk <esc>
-inoremap kj <esc>
-
 " Use spaces instead of TAB
 set autoindent
 set expandtab
@@ -126,3 +122,20 @@ if &term =~ '^xterm' || exists('$TMUX')
   " leave vim
   autocmd VimLeave * silent !echo -ne "\e[5 q"
 endif
+
+# Mappings to move lines: https://vim.fandom.com/wiki/Moving_lines_up_or_down
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+# Paste over selected text without overwriting the register: https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text
+let mapleader=" "
+xnoremap <leader>p "_dP
+
+# Center view after various vertical movements
+nnoremap G Gzz
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
