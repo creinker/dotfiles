@@ -1,10 +1,18 @@
 [user]
-	name = Chris Reinker
-	email = creinker@gmail.com
+    name = Chris Reinker
+    email = creinker@gmail.com
 [core]
 {{- if eq .chezmoi.os "windows" }}
-	autocrlf = true
-	filemode = false
+    autocrlf = true
+    filemode = false
 {{ else }}
     autocrlf = input
+{{ end }}
+{{- if eq .chezmoi.os "linux" }}
+[credential "https://github.com"]
+    helper =
+    helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+    helper =
+    helper = !/usr/bin/gh auth git-credential
 {{ end }}
