@@ -3,4 +3,7 @@ source ~/.vimrc
 # IdeaVim includes vim-surround, so enable it here
 set surround
 
+# Enable IdeaVim smart line joining
+set ideajoin
+
 nmap <C-P> :action GotoFile<CR>

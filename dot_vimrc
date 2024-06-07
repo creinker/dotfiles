@@ -99,10 +99,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" switch tabs (same as gt & gT)
-nnoremap J :tabprevious<CR>
-nnoremap K :tabnext<CR>
-
 " Change cursor shape in different modes
 " adapted from: https://github.com/microsoft/terminal/issues/4335
 if &term =~ '^xterm' || exists('$TMUX')
