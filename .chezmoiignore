@@ -2,6 +2,6 @@
 Documents
 {{ else }}
 .inputrc
+.lftp
 .tmux.conf
-lftp
 {{ end }}
