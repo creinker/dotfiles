@@ -1,0 +1,20 @@
+[user]
+	name = Chris Reinker
+	email = creinker@gmail.com
+
+{{ if eq .chezmoi.os "windows" }}
+[core]
+    autocrlf = false
+    filemode = false
+
+[credential]
+    helper =
+	helper = C:/Users/crein/scoop/apps/git-credential-manager/current/git-credential-manager.exe
+
+[credential "https://devops.sdcourt.ca.gov"]
+	# Prevent Git Credential Manager from using Windows Integrated
+    # Authentication for DevOps, because it doesn't work over the court's VPN.
+	# See: https://github.com/git-ecosystem/git-credential-manager/issues/391#issuecomment-998731163
+	allowWindowsAuth = false
+	provider = generic
+{{ end }}
