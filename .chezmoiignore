@@ -1,6 +1,7 @@
 {{ if ne .chezmoi.os "windows" }}
 Documents
 {{ else }}
+.config/powershell
 .inputrc
 .lftp
 .tmux.conf

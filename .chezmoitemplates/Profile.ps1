@@ -10,9 +10,3 @@ function OnViModeChange {
         Write-Host -NoNewLine "`e[5 q"
     }
 }
-
-# Use scoop-search to improve search speed: https://github.com/shilangyu/scoop-search
-Invoke-Expression (&scoop-search --hook)
-
-# Alias for kubernetes
-New-Alias -Name k -Value kubectl
