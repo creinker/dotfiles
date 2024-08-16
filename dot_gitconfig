@@ -2,7 +2,6 @@
 	name = Chris Reinker
 	email = creinker@gmail.com
 
-{{ if eq .chezmoi.os "windows" }}
 [core]
     autocrlf = false
     filemode = false
@@ -17,4 +16,3 @@
 	# See: https://github.com/git-ecosystem/git-credential-manager/issues/391#issuecomment-998731163
 	allowWindowsAuth = false
 	provider = generic
-{{ end }}
