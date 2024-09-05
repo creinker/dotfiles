@@ -8,7 +8,7 @@
 
 [credential]
     helper =
-	helper = C:/Users/crein/scoop/apps/git-credential-manager/current/git-credential-manager.exe
+	helper = C:/Users/Chris/scoop/apps/git-credential-manager/current/git-credential-manager.exe
 
 [credential "https://devops.sdcourt.ca.gov"]
 	# Prevent Git Credential Manager from using Windows Integrated

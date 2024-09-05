@@ -2,3 +2,30 @@
 
 # Use scoop-search to improve search speed: https://github.com/shilangyu/scoop-search
 Invoke-Expression (&scoop-search --hook)
+
+# Set aliases for lsd, from: https://github.com/FelipeCybis/pwsh-lsd-aliases?tab=readme-ov-file
+Import-Module lsd-aliases -DisableNameChecking
+
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
+## ENABLE VI MODE
+
+# From: https://learn.microsoft.com/en-us/powershell/module/psreadline/set-psreadlineoption?view=powershell-7.4#example-6-use-vimodechangehandler-to-display-vi-mode-changes
+function OnViModeChange {
+    if ($args[0] -eq 'Command') {
+        # Set the cursor to a blinking block.
+        Write-Host -NoNewLine "`e[1 q"
+    } else {
+        # Set the cursor to a blinking line.
+        Write-Host -NoNewLine "`e[5 q"
+    }
+}
+
+$PSReadLineOptions = @{
+    EditMode = "vi"
+    HistoryNoDuplicates = $true
+    HistorySearchCursorMovesToEnd = $true # keep the cursor at the end when navigating history
+    ViModeIndicator = "Script"
+    ViModeChangeHandler = $Function:OnViModeChange
+}
+Set-PSReadLineOption @PSReadLineOptions
