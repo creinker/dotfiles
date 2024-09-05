@@ -1,4 +1,5 @@
 {{ if ne .chezmoi.os "windows" }}
+AppData
 Documents
 .gitconfig # Windows-only, we use Home-Manager on NixOS
 {{ else }}
