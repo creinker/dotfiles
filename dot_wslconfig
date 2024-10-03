@@ -1,0 +1,4 @@
+# Disable WSLg because it doesn't work well with FancyZones.
+# Use X410 or GWSL instead.
+[wsl2]
+guiApplications=false

@@ -9,3 +9,4 @@ Documents
 .lftp
 .tmux.conf
 {{ end }}
+README.md

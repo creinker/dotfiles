@@ -1,9 +1,9 @@
 [user]
 	name = Chris Reinker
-	email = creinker@gmail.com
+	email = chris@reinker.dev
 
 [core]
-    autocrlf = false
+    autocrlf = input
     filemode = false
 
 [credential]
