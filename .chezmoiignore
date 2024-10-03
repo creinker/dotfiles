@@ -1,8 +1,14 @@
+# Windows-only stuff, managed by Home-Manager on NixOS
 {{ if ne .chezmoi.os "windows" }}
 AppData
 Documents
 .config/lsd
-.gitconfig # Windows-only stuff, managed by Home-Manager on NixOS
+.gitconfig
+# komorebi config
+.config/whkdrc
+applications.yaml
+komorebi.bar.json
+komorebi.json
 {{ else }}
 .config/powershell
 .inputrc
